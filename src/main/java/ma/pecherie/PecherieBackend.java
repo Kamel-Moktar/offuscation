@@ -42,7 +42,8 @@ public class PecherieBackend {
         final CorsConfiguration config = new CorsConfiguration();
 
         config.setAllowCredentials(true);
-        config.addAllowedOrigin("*");
+        config.addAllowedOriginPattern("*");
+        //config.addAllowedOrigin("*");
         config.addAllowedHeader("*");
         config.addAllowedMethod("*");
         config.addExposedHeader("*");
