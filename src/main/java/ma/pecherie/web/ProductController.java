@@ -17,39 +17,39 @@ public class ProductController {
     @Autowired
     ProductService productService;
 
-   @GetMapping("/getAllProducts")
+   @GetMapping("ma.pecherie/getAllProducts")
     public ArrayList<Product> getAllProduct(){
        return  productRepository.finAllOrderByName();
     }
 
-    @PostMapping("/addProduct")
+    @PostMapping("ma.pecherie/addProduct")
     public Product saveProduct(@RequestBody Product product){
         return  productRepository.save(product);
     }
 
-    @DeleteMapping("/deleteProduct/{id}")
+    @DeleteMapping("ma.pecherie/deleteProduct/{id}")
     public void deleteProduct(@PathVariable Long id ){
        Product p=productRepository.findProductById(id);
        productRepository.delete(p);    }
 
 
-    @GetMapping("/getProductByName/{name}")
+    @GetMapping("ma.pecherie/getProductByName/{name}")
     public Product getProductByName(@PathVariable  String name){
         return  productRepository.findProductByName(name);
     }
 
-    @PutMapping("/updateProduct")
+    @PutMapping("ma.pecherie/updateProduct")
     public Product updateProduct(@RequestBody  Product product){
         return  productService.updateProduct(product);
     }
 
-    @PutMapping("/saveProductToProvide")
+    @PutMapping("ma.pecherie/saveProductToProvide")
     public List<Product> saveProductToProvide(@RequestBody ArrayList<Product> products){
 
        return productService.saveProductsToProvide(products);
     }
 
-    @PutMapping("/saveProductToSle")
+    @PutMapping("ma.pecherie/saveProductToSle")
     public List<Product> saveProductToSale(@RequestBody ArrayList<Product> products){
 
         return productService.saveProductsToSale(products);

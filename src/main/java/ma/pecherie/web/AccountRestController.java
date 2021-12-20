@@ -20,7 +20,7 @@ public class AccountRestController {
     /*
     * pour la modification de collaborateur
     * */
-    @PutMapping(value="/updateUser")
+    @PutMapping(value="ma.pecherie/updateUser")
     public AppUser updateUser(@RequestBody  AppUser user){
         return accountService.updateUser(user);
     }
@@ -28,7 +28,7 @@ public class AccountRestController {
     /*
     Pour le changement de mot de passe
      */
-    @PutMapping(value="/update/{id}")
+    @PutMapping(value="ma.pecherie/update/{id}")
     public AppUser update(@RequestBody  String psw,@PathVariable Long id){
         return accountService.updatePassWord(psw,id);
     }
@@ -36,7 +36,7 @@ public class AccountRestController {
     /*
     * pour l'ajour d'un collaborateur
     * */
-    @PostMapping("/addUser")
+    @PostMapping("ma.pecherie/addUser")
     public AppUser register(@RequestBody  AppUser user){
        //AppUser appUser=accountService.findUserByName(user.getUserName());
        //if(!(appUser==null)) throw new RuntimeException("User name already exist !");
@@ -56,7 +56,7 @@ public class AccountRestController {
     /*
     * por la recuperation de collaborateur
     * */
-   @GetMapping("/getAllUsers")
+   @GetMapping("ma.pecherie/getAllUsers")
     public Collection<AppUser> getAllUser(){
         return accountService.findAllUser();
     }
@@ -64,7 +64,7 @@ public class AccountRestController {
     /*
     * por la supprission de utilisateur
     * */
-    @DeleteMapping(value="/deleteUser/{id}")
+    @DeleteMapping(value="ma.pecherie/deleteUser/{id}")
     public void deleteUser(@PathVariable Long id){
         AppUser appUser=accountService.findUserById(id);
         accountService.deleteUser(appUser);
@@ -73,20 +73,20 @@ public class AccountRestController {
    /*
    pour la recuperation de rolles
     */
-    @GetMapping("/getroles")
+    @GetMapping("ma.pecherie/getroles")
     public Collection<AppRole> getAllRoles(){
         return accountService.findAllRole();
     }
     /*
        pour la recuperation de rolles
         */
-    @GetMapping("/getUserByName/{name}")
+    @GetMapping("ma.pecherie/getUserByName/{name}")
     public AppUser getUserByName(@PathVariable String name){
         return accountService.findUserByName(name);
     }
 
 
-    @GetMapping("/getCurrentUser")
+    @GetMapping("ma.pecherie/getCurrentUser")
     public AppUser getCurrentUser(){
         return accountService.getCurrentUser();
     }
