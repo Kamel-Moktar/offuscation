@@ -37,7 +37,7 @@ public class PecherieBackend {
         return new ObjectMapper();
      }
 
-   @Bean
+    @Bean
     public FilterRegistrationBean filterRegistrationBean() {
         final CorsConfiguration config = new CorsConfiguration();
         config.setAllowCredentials(true);
