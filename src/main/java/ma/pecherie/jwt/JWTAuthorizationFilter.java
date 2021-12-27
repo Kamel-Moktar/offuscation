@@ -1,4 +1,4 @@
-package ma.pecherie.cofig_sec;
+package ma.pecherie.jwt;
 
 import io.jsonwebtoken.Claims;
 import io.jsonwebtoken.Jwts;

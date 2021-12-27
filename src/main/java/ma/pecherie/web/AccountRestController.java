@@ -2,7 +2,7 @@ package ma.pecherie.web;
 
 
 import ma.pecherie.dao.security.AppRole;
-import ma.pecherie.dao.security.AppUser;
+import ma.pecherie.dao.security.user.AppUser;
 import ma.pecherie.service.AccountService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;

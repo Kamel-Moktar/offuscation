@@ -1,4 +1,4 @@
-package ma.pecherie.cofig_sec;
+package ma.pecherie.jwt;
 
 public class SecurityConstants {
     public static  final String SECRET="Sakina";

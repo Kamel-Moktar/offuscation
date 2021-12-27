@@ -1,6 +1,6 @@
 package ma.pecherie.service;
 import ma.pecherie.dao.security.AppRole;
-import ma.pecherie.dao.security.AppUser;
+import ma.pecherie.dao.security.user.AppUser;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.core.GrantedAuthority;
 import org.springframework.security.core.authority.SimpleGrantedAuthority;

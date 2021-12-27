@@ -2,12 +2,11 @@ package ma.pecherie.service;
 
 import ma.pecherie.dao.security.AppRole;
 import ma.pecherie.dao.security.AppRoleRepository;
-import ma.pecherie.dao.security.AppUser;
-import ma.pecherie.dao.security.AppUserRepository;
+import ma.pecherie.dao.security.user.AppUser;
+import ma.pecherie.dao.security.user.AppUserRepository;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.core.Authentication;
-import org.springframework.security.core.context.SecurityContext;
 import org.springframework.security.core.context.SecurityContextHolder;
 import org.springframework.security.core.userdetails.UsernameNotFoundException;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
@@ -15,9 +14,7 @@ import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
 import java.util.ArrayList;
-import java.util.LinkedList;
 import java.util.List;
-import java.util.Optional;
 
 /*
 le service de la gestion de utilisateurs / collaborateurs

@@ -10,6 +10,7 @@ import javax.persistence.*;
 
 import java.util.List;
 
+import static javax.persistence.GenerationType.AUTO;
 import static javax.persistence.GenerationType.IDENTITY;
 
 @Entity
@@ -17,12 +18,15 @@ import static javax.persistence.GenerationType.IDENTITY;
 @NoArgsConstructor
 @AllArgsConstructor
 @ToString
+@Table(name = "product")
 public class Product {
     @Id
-    @GeneratedValue(strategy = IDENTITY)
+    @GeneratedValue(strategy = AUTO)
+    @Column(name = "product_id")
     private Long id;
-    @Column (unique = true)
+    @Column (name = "product_name", unique = true)
     private String name;
+    @Column(name = "quantity")
     private double quantity;
 
 }

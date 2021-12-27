@@ -20,8 +20,12 @@ public interface ProductRepository extends JpaRepository<Product, Long> {
 
     @Query("select new Product( id,name,quantity) from Product  where quantity>0 order by name asc ")
     ArrayList<Product> finAllInStockOrderByName();
-    public Product findProductById(Long id);
-    public Product findProductByName(String name);
+
+    //@Query("select new Product( id,name,quantity) from Product  where id=:product_id ")
+    public Product findProductById(Long product_id);
+
+   //// @Query("select new Product( id,name,quantity) from Product  where name=:product_name ")
+    public Product findProductByName(String product_name);
 
 
 

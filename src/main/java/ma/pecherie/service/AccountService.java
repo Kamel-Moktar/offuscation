@@ -1,10 +1,9 @@
 package ma.pecherie.service;
 
 import ma.pecherie.dao.security.AppRole;
-import ma.pecherie.dao.security.AppUser;
+import ma.pecherie.dao.security.user.AppUser;
 
 import java.util.List;
-import java.util.Optional;
 
 public interface AccountService {
     public AppUser savUser(AppUser user);

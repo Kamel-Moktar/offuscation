@@ -12,9 +12,11 @@ import javax.persistence.*;
 
 @Entity
 @Data @AllArgsConstructor @NoArgsConstructor
+//@Table(name = "sale_product")
 public class SaleProduct {
 
     @Id @GeneratedValue
+    @Column(name = "sale_product_id")
     private  Long id;
 
     @ManyToOne
@@ -24,7 +26,7 @@ public class SaleProduct {
     @ManyToOne
     @JoinColumn(name = "sale_id")
     private Sale sale;
-
+    @Column(name = "request_quantity")
     private Double requestQuantity;
 
 }

@@ -1,4 +1,4 @@
-package ma.pecherie.cofig_sec;
+package ma.pecherie.jwt;
 
 
 import com.fasterxml.jackson.databind.ObjectMapper;
@@ -6,7 +6,7 @@ import com.fasterxml.jackson.databind.ObjectMapper;
 import io.jsonwebtoken.Jwts;
 
 import io.jsonwebtoken.SignatureAlgorithm;
-import ma.pecherie.dao.security.AppUser;
+import ma.pecherie.dao.security.user.AppUser;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.authentication.AuthenticationManager;
 import org.springframework.security.authentication.UsernamePasswordAuthenticationToken;

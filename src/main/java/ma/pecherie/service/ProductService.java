@@ -51,6 +51,11 @@ public class ProductService {
         oldProduct.setQuantity(product.getQuantity());
         return oldProduct;
     }
+
+    public Product saveProduct(Product product){
+        return productRepository.save(product);
+
+    }
 /*Approvisionnement de stocke /achat*/
    public List<Product> saveProductsToProvide(List<Product> productsToProvide){
 
